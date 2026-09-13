@@ -1,0 +1,56 @@
+schema_version = 1
+
+[upstream]
+repository = "runetfreedom/russia-v2ray-rules-dat"
+ref = "release"
+geosite_asset = "geosite.dat"
+geoip_asset = "geoip.dat"
+
+[categories]
+geosite = [
+  "ru-blocked",
+  "refilter",
+  "antifilter-download",
+  "ru-available-only-inside",
+  "category-ads-all",
+  "private",
+  "youtube",
+  "twitter",
+  "discord",
+  "meta",
+  "openai",
+  "telegram",
+  "yandex",
+  "apple",
+  "icloud",
+  "category-ru",
+  "category-gov-ru",
+  "category-bank-ru",
+  "category-media-ru",
+  "category-ecommerce-ru",
+  "category-retail-ru",
+  "category-travel-ru",
+  "category-medicine-ru",
+]
+
+geoip = [
+  "ru-blocked",
+  "re-filter",
+  "private",
+  "telegram",
+  "cloudflare",
+  "cloudfront",
+  "fastly",
+  "facebook",
+  "google",
+  "twitter",
+  "yandex",
+  "ru",
+]
+
+[profiles]
+ids = [
+  "bypass-blacklist",
+  "freedom-no-ru",
+  "freedom-no-ru-no-ads",
+]

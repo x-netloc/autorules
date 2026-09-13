@@ -1,0 +1,40 @@
+schema_version = 1
+id = "freedom-no-ru-no-ads"
+description = "Proxy everything except Russian resources and private networks; reject advertising domains."
+default = "proxy"
+
+[[rules]]
+action = "direct"
+geosite = ["private"]
+
+[[rules]]
+action = "direct"
+geoip = ["private"]
+
+[[rules]]
+action = "reject"
+geosite = ["category-ads-all"]
+
+[[rules]]
+action = "direct"
+geosite = ["apple", "icloud"]
+
+[[rules]]
+action = "direct"
+domains = [
+  "domain:ru",
+  "domain:su",
+  "domain:xn--p1ai",
+  "domain:2gis.com",
+  "domain:vk.com",
+  "domain:vk.me",
+  "domain:userapi.com",
+]
+
+[[rules]]
+action = "direct"
+geosite = ["category-ru", "ru-available-only-inside"]
+
+[[rules]]
+action = "direct"
+geoip = ["ru"]

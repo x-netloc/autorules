@@ -1,0 +1,28 @@
+schema_version = 1
+id = "bypass-blacklist"
+description = "Proxy only blocked-in-Russia resources and selected global services; everything else is direct."
+default = "direct"
+
+[[rules]]
+action = "direct"
+geosite = ["private"]
+
+[[rules]]
+action = "direct"
+geoip = ["private"]
+
+[[rules]]
+action = "proxy"
+geosite = ["youtube", "openai", "discord", "telegram", "meta", "twitter"]
+
+[[rules]]
+action = "proxy"
+geoip = ["cloudflare", "cloudfront", "fastly", "facebook", "telegram", "twitter"]
+
+[[rules]]
+action = "proxy"
+geosite = ["ru-blocked"]
+
+[[rules]]
+action = "proxy"
+geoip = ["ru-blocked", "re-filter"]

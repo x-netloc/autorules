@@ -1,0 +1,36 @@
+schema_version = 1
+id = "freedom-no-ru"
+description = "Proxy everything except private networks, Apple services and Russian resources."
+default = "proxy"
+
+[[rules]]
+action = "direct"
+geosite = ["private"]
+
+[[rules]]
+action = "direct"
+geoip = ["private"]
+
+[[rules]]
+action = "direct"
+geosite = ["apple", "icloud"]
+
+[[rules]]
+action = "direct"
+domains = [
+  "domain:ru",
+  "domain:su",
+  "domain:xn--p1ai",
+  "domain:2gis.com",
+  "domain:vk.com",
+  "domain:vk.me",
+  "domain:userapi.com",
+]
+
+[[rules]]
+action = "direct"
+geosite = ["category-ru", "ru-available-only-inside"]
+
+[[rules]]
+action = "direct"
+geoip = ["ru"]
