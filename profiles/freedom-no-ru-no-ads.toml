@@ -38,3 +38,7 @@ geosite = ["category-ru", "ru-available-only-inside"]
 [[rules]]
 action = "direct"
 geoip = ["ru"]
+
+[[rules]]
+action = "direct"
+geosite = ["category-ip-geo-detect"]

@@ -13,6 +13,7 @@ geosite = [
   "antifilter-download",
   "ru-available-only-inside",
   "category-ads-all",
+  "category-ip-geo-detect",
   "private",
   "youtube",
   "twitter",
